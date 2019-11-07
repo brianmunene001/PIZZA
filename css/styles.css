@@ -9,3 +9,23 @@ body{
     background-size: cover;
     height: 270px;
   }
+  .sweet, h3, h4 {
+    font-family: 'Raleway', sans-serif;
+  }
+  .sweet {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  .qHeader {
+    text-decoration: springgreen;
+    text-decoration-color: violet;
+  }
+  .cartItem {
+    cursor: pointer;
+    color: #0088cc;
+  }
+  
+  .cartItem:hover {
+    text-decoration: underline;
+  }
+  
