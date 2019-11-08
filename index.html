@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.4.1.js"></script>
@@ -9,113 +9,117 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
     <meta charset="utf-8">
     <title>Crazy Pizza</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container-fluid">
-        <div class="jumbotron text-centre">
-<h1>Crazy Pizza</h1>
-<br>
-    </div>
-    <div class="sweet CrazyPizza">
-        <p class="text-centre">All of our pizzas come with an extra flavoured tomato sauce either smooth or pureed.</p>
-        <form id="pizzaform">
-        <p class="qHeader">Select pizza size:</p> 
-        <select class="form-control" id="size">   
-        <option value="Small">small $7</option>
-        <option value="Medium">Medium $9</option>
-        <option value="Large">Large $11</option>
-        <option value="Extra Large">Extra Large $16</option>
-        </select>
-        <br>
-        <p class="qHeader">Select Pizza Crust:</p>
-        <select class="form-control" id="crust">
+      <div class="jumbotron text-center">
+        <h1>Crazy Pizza</h1>
+        <hr>
+      </div>
+      <div class="well Crazy Pizza">
+        <p class="text-center">All pizzas come with our special flavoured tomato sauce either smooth or pureed.</p>
+        <form id="pizzaForm">
+          <p class="qHeader">Select Pizza Size:</p>
+          <select class="form-control" id="size">
+            <option value="Small">small $7</option>
+            <option value="Medium">Medium $9</option>
+            <option value="Large">Large $11</option>
+            <option value="Extra Large">Extra Large $16</option>
+          </select>
+          <br>
+          <p class="qHeader">Select Pizza Crust:</p>
+          <select class="form-control" id="crust">
             <option value="Cripsy">Cripsy $2</option>
             <option value="Stuffed">Stuffed $1.5</option>
             <option value="Thin Crust">Thin Crust $1</option>
-        </select>
-        <br>
-        <div class="form-group">
+          </select>
+          <br>
+          <div class="form-group">
             <p class="qHeader">Toppings: ($2 per topping)</p>
             <input type="checkbox" name="topping" value="Pepperoni"> Pepperoni<br>
             <input type="checkbox" name="topping" value="Mushrooms"> Mushrooms<br>
-            <input type="checkbox" name="topping" value="Peppers"> Green peppers<br>
-            <input type="checkbox" name="topping" value="Onions"> Onions<br>
-            <input type="checkbox" name="topping" value="Cheese"> Extra cheese<br>
+            <input type="checkbox" name="topping" value="Peppers"> Green Peppers<br>
+            <input type="checkbox" name="topping" value="Onions">  Onions<br>
             <input type="checkbox" name="topping" value="Pineapple"> Pineapple<br>
-            <input type="checkbox" name="topping" value="Black"> Black olives<br>
+            <input type="checkbox" name="topping" value="Cheese"> Extra Cheese<br>
+            <input type="checkbox" name="topping" value="Olives"> Black Olives<br>
             <input type="checkbox" name="topping" value="Spinach"> Spinach<br>
-        </div>
-        <div class="text-centre">
+          </div>
+          <div class="text-center">
             <button type="submit" class="btn btn-danger" id="submitPizza">Place in Cart</button>
-        </div>
+          </div>
         </form>
-    </div>
-    <div class="sweet cartWell">
-        <h3>Your cart</h3>
-        <h4>Your Total: $<span class="cartTotal"></span></h4>
-    </div>
-    <div class="row">
-        <div class="col-xs-1">
+      </div>
+      <div class="well cartWell">
+        <div class="text-center">
+          <h3>Your Cart</h3>
+          <h4>Your Total: $<span class="cartTotal"></span></h4>
         </div>
-        <div class="col-xs-5">
+        <div class="row">
+          <div class="col-xs-1">
+          </div>
+          <div class="col-xs-5">
             <ol id="cart">
             </ol>
-        </div>
-        <div class="col-xs-5" id="show-pizza">
+          </div>
+          <div class="col-xs-5" id="show-pizza">
             <p id="pizzaListName"></p>
             <ul>
-                    <li>Size: <span class="size"></span></li>
-                    <li>Crust: <span class="crust"></span></li>
-                    <li>Toppings: <span class="toppings"></span></li>
-                    <li>Cost: $<span class="cost"></span></li>
+              <li>Size: <span class="size"></span></li>
+              <li>Crust: <span class="crust"></span></li>
+              <li>Toppings: <span class="toppings"></span></li>
+              <li>Cost: $<span class="cost"></span></li>
             </ul>
+          </div>
+          <div class="col-xs-1">
+          </div>
         </div>
-    <div class="col-xs-1">
-    </div>
-    </div>
-    <div class="text-centre">
-            <button type="button" class="btn btn-danger" id="submitCart">Submit Order</button>
-    </div>
-    </div>
-    <div class="well choiceWell text-center">
-            <p>You can either pick up your order or get it delivered to your place.</p>
-            <p>Pick Up cost $0</p>
-            <button type="button" class="btn btn-success" id="pickup">Pick Up</button>
-            <p id="deliveryCost">Delivery cost $5</p>
-            <button type="button" class="btn btn-danger" id="delivery">Delivery</button>
+        <div class="text-center">
+          <button type="button" class="btn btn-danger" id="submitCart">Submit Order</button>
+        </div>
+      </div>
+      <div class="well choiceWell text-center">
+        <p>You can either pick up your order or get it delivered to your place.</p>
+        <p>Pick Up cost $0</p>
+        <button type="button" class="btn btn-success" id="pickup">Pick Up</button>
+        <p id="deliveryCost">Delivery cost $5</p>
+        <button type="button" class="btn btn-danger" id="delivery">Delivery</button>
+      </div>
+
+      <div class="well pickupWell text-center">
+        <form id="pickupForm">
+          <div class="form-group">
+            <label for="name">Enter the name of the person picking up your order:</label>
+            <input id="pickupName" class="form-control" type="text">
           </div>
-          <div class="well pickupWell text-center">
-                <form id="pickupForm">
-                  <div class="form-group">
-                    <label for="name">Enter the name of the person picking up your order:</label>
-                    <input id="pickupName" class="form-control" type="text">
-                  </div>
-                  <button type="button" class="btn btn-success" id="submitPickupForm">Submit</button>
-                </form>
-                <div class="pickupEnd">
-                        <p>Thanks for ordering from Crazy Pizza. <span class="nameInput"></span> can pick up your order in 10 to 30 minutes!</p>
-                        <button type="button" class="btn btn-success reset">Order More Pizza!</button>
-                </div>
-          </div>
-          <div class="sweet deliverySweet text-container">
-                <form id="deliveryForm">
-                        <div class="form-group">
-                          <label for="name" required>Enter Name:</label>
-                          <input id="deliveryName" class="form-control" type="text">
-                          <label for="address">Enter Address:</label>
-                          <input id="address" class="form-control" type="text">
-                          <label for="city">Enter City:</label>
-                          <input id="city" class="form-control" type="text">
-                          <label for="county">Enter County:</label>
-                          <input id="county" class="form-control" type="text">
+          <button type="button" class="btn btn-success" id="submitPickupForm">Submit</button>
+        </form>
+        <div id="pickupEnd">
+          <p>Thanks for ordering from Randy pizzaMaker. <span class="nameInput"></span> can pick up your order in 15 to 30 minutes!</p>
+          <button type="button" class="btn btn-success reset">Order More Pizza!</button>
+        </div>
+      </div>
+      <div class="well deliveryWell text-center">
+        <form id="deliveryForm">
+          <div class="form-group">
+            <label for="name" required>Enter Name:</label>
+            <input id="deliveryName" class="form-control" type="text">
+            <label for="address">Enter Address:</label>
+            <input id="address" class="form-control" type="text">
+            <label for="city">Enter City:</label>
+            <input id="city" class="form-control" type="text">
+            <label for="county">Enter County:</label>
+            <input id="county" class="form-control" type="text">
           </div>
           <button type="button" class="btn btn-danger" id="submitDeliveryForm">Submit</button>
         </form>
         <div id="deliveryEnd">
-                <p>Okay! We are sending this order to <span class="nameInput"></span> at <span class="addressInput"></span>.</p>
-                <p>You can expect your order to arrive in less than 45 minutes.</p>
-                <button type="button" class="btn btn-danger reset">Order More Pizza!</button>
-              </div>
-            </div>
-</body>
+          <p>Okay! We are sending this order to <span class="nameInput"></span> at <span class="addressInput"></span>.</p>
+          <p>You can expect your order to arrive in 45 minutes.</p>
+          <button type="button" class="btn btn-danger reset">Order More Pizza!</button>
+        </div>
+      </div>
+
+    </div>
+  </body>
 </html>
