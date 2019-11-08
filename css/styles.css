@@ -28,4 +28,17 @@ body{
   .cartItem:hover {
     text-decoration: underline;
   }
+  .cartWell, .choiceWell, .deliveryWell, .pickupWell, #show-pizza, #pickupEnd, #deliveryEnd {
+    display: none;
+  }
+  
+  button#pickup, button#delivery {
+    margin-left: 33%;
+    margin-right: 33%;
+  }
+  
+  #deliveryCost {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   
